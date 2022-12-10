@@ -1,9 +1,5 @@
 // Reeact router
-import {
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 // Transitions
 import { TransitionGroup, CSSTransition } from "react-transition-group";
@@ -22,9 +18,18 @@ import NavigationBar from "./components/NavigationBar";
 // import Footer from "./components/Footer";
 
 import "./App.css";
+import { useEffect } from "react";
 
 function App() {
   const location = useLocation();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [pathname]);
   return (
     <div
       style={{
