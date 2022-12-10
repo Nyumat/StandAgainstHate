@@ -10,6 +10,10 @@ function Welcome() {
     "Bigotry",
     "Prejudice",
     "Racism",
+    "Sexism",
+    "Homophobia",
+    "Transphobia",
+    "Injustice",
   ];
   const getRandomFrom = (array: Array<String>): String => {
     const index = Math.floor(Math.random() * array.length);
@@ -32,7 +36,7 @@ function Welcome() {
   }, []);
 
   return (
-    <div className="h-screen w-screen text-center flex flex-col justify-center items-center gap-4 -translate-y-10">
+    <div className="lg:h-screen sm:h-min sm:mt-5 pt-4 pb-16 w-screen text-center flex flex-col justify-center items-center gap-4">
       <h1 className=" text-6xl text-center text-white-800">
         Stand Up Against
         <div className="mt-3">
@@ -51,13 +55,13 @@ function Welcome() {
           </span>
         </div>
       </h1>
-      <p className="mt-2 mb-5 text-center text-white-800 whitespace-wrap w-1/2 text-3xl border-2 border-blue-500 rounded-lg p-4">
+      <p className="mt-2 mb-5 text-center text-white-800 whitespace-wrap w-8/12 text-3xl border-2 border-blue-500 rounded-lg p-4">
         Stand Against Hate is a website that aims to help people who are
         experiencing hate crimes or discrimination. We provide resources and
         information to help you take action against hate.
       </p>
 
-      <p className="mt-2 mb-5 text-center text-white-800 whitespace-wrap w-1/2 text-3xl border-2 border-blue-500 rounded-lg p-4">
+      <p className="mt-2 mb-5 text-center text-white-800 whitespace-wrap w-8/12 text-3xl border-2 border-blue-500 rounded-lg p-4">
         This website was developed by:{"  "}
         <a href="https://github.com/nyumat" className="text-blue-500">
           Tom Nyuma
