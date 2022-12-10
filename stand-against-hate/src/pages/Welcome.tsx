@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
+import { Link } from "react-router-dom";
 
 function Welcome() {
   const words: Array<String> = [
@@ -31,7 +32,7 @@ function Welcome() {
   }, []);
 
   return (
-    <div className="h-screen w-screen text-center flex flex-col justify-center items-center gap-4">
+    <div className="h-screen w-screen text-center flex flex-col justify-center items-center gap-4 -translate-y-10">
       <h1 className=" text-6xl text-center text-white-800">
         Stand Up Against
         <div className="mt-3">
@@ -56,10 +57,19 @@ function Welcome() {
         information to help you take action against hate.
       </p>
 
+      <p className="mt-2 mb-5 text-center text-white-800 whitespace-wrap w-1/2 text-3xl border-2 border-blue-500 rounded-lg p-4">
+        This website was developed by:{"  "}
+        <a href="https://github.com/nyumat" className="text-blue-500">
+          Tom Nyuma
+        </a>
+      </p>
+
       <div className="flex flex-col justify-center items-center">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          <a href="/home">Get Started</a>
-        </button>
+        <Link to="/home">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Get Started
+          </button>
+        </Link>
       </div>
     </div>
   );
