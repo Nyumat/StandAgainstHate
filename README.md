@@ -1,6 +1,6 @@
 # Stand Against Hate
 
-### Take the first step to fight against hate, [here.](https://standagainsthate.onrender.com)
+### Take the first step to fight against hate. [standagainsthate.onrender.com](https://standagainsthate.onrender.com)
 #
 
 ## Introduction
